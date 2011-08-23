@@ -6,12 +6,14 @@ import org.elasticsearch.index.Index;
 import org.elasticsearch.index.analysis.AbstractTokenFilterFactory;
 
 import com.brewster.searchcontrib.lucene.analysis.HashingTokenFilter;
+import org.elasticsearch.common.inject.Inject;
+import org.elasticsearch.index.settings.IndexSettings;
 
 public class HashingTokenFilterFactory extends AbstractTokenFilterFactory {
 
 	public final String salt;
 	
-	public HashingTokenFilterFactory(Index index, Settings indexSettings,
+	@Inject public HashingTokenFilterFactory(Index index, @IndexSettings Settings indexSettings,
 			String name, Settings settings) {
 		super(index, indexSettings, name, settings);
 		salt = settings.get("salt");
