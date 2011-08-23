@@ -1,11 +1,11 @@
-package com.brewster.searchcontrib.elasticsearch.index.analysis;
+package com.brewster.hashinganalyzer.elasticsearch.index.analysis;
 
 import org.apache.lucene.analysis.TokenStream;
 import org.elasticsearch.common.settings.Settings;
 import org.elasticsearch.index.Index;
 import org.elasticsearch.index.analysis.AbstractTokenFilterFactory;
 
-import com.brewster.searchcontrib.lucene.analysis.HashingTokenFilter;
+import com.brewster.hashinganalyzer.lucene.analysis.HashingTokenFilter;
 import org.elasticsearch.common.inject.Inject;
 import org.elasticsearch.index.settings.IndexSettings;
 

@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.brewster.searchcontrib;
+package com.brewster.hashinganalyzer;
 
 import org.elasticsearch.common.inject.Module;
 import org.elasticsearch.index.analysis.AnalysisModule;
@@ -12,22 +12,22 @@ import org.elasticsearch.plugins.AbstractPlugin;
  *
  * @author mat
  */
-public class SearchContribPlugin extends AbstractPlugin {
+public class HashingAnalyzerPlugin extends AbstractPlugin {
     @Override
     public String name() {
-        return "SearchContribPlugin";
+        return "hashing-analyzer";
     }
 
     @Override
     public String description() {
-        return "Brewster extensions to Lucene and ElasticSearch";
+        return "TokenFilter to index fulltext using salted hashes";
     }
     
     @Override
     public void processModule(Module module) {
         if (module instanceof AnalysisModule) {
             final AnalysisModule analysisModule = (AnalysisModule) module;
-            analysisModule.addProcessor(new SearchContribAnalysisBinderProcessor());
+            analysisModule.addProcessor(new HashingAnalysisBinderProcessor());
         }
     }
     

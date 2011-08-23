@@ -1,4 +1,4 @@
-package com.brewster.searchcontrib.lucene.analysis;
+package com.brewster.hashinganalyzer.lucene.analysis;
 
 import static org.apache.commons.codec.digest.DigestUtils.shaHex;
 import static org.junit.Assert.assertEquals;
@@ -13,7 +13,7 @@ import org.apache.lucene.analysis.miscellaneous.SingleTokenTokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.junit.Test;
 
-import com.brewster.searchcontrib.lucene.analysis.HashingTokenFilter;
+import com.brewster.hashinganalyzer.lucene.analysis.HashingTokenFilter;
 
 public class HashingTokenFilterTest {
 

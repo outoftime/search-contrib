@@ -1,4 +1,4 @@
-package com.brewster.searchcontrib.lucene.analysis;
+package com.brewster.hashinganalyzer.lucene.analysis;
 
 import java.io.IOException;
 

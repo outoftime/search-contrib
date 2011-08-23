@@ -1,5 +1,6 @@
-package com.brewster.searchcontrib.elasticsearch.index.analysis;
+package com.brewster.hashinganalyzer.elasticsearch.index.analysis;
 
+import com.brewster.hashinganalyzer.elasticsearch.index.analysis.HashingTokenFilterFactory;
 import org.apache.lucene.analysis.Token;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.miscellaneous.SingleTokenTokenStream;
@@ -10,7 +11,7 @@ import org.elasticsearch.index.analysis.TokenFilterFactory;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-import com.brewster.searchcontrib.lucene.analysis.HashingTokenFilter;
+import com.brewster.hashinganalyzer.lucene.analysis.HashingTokenFilter;
 
 public class HashingTokenFilterFactoryTest {
 
